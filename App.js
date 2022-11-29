@@ -1,14 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import Toast, {DURATION} from 'react-native-easy-toast';
+
 
 export default function App() {
-  let x = 1;
-  console.log('app executed');
 
   return (
     <View style={styles.container}>
-      <Text>ola ke ase?</Text>
+      <Text>ola ke ase</Text>
+      <Button title={"Ayuda"} onPress={()=>{
+            this.toast.show('Tu mensaje fue enviado 🚨',2000);
+        }}/>
       <StatusBar style="auto" />
+      <Toast ref={(toast) => this.toast = toast}
+        position='top'
+      />
     </View>
   );
 }
