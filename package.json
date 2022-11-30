@@ -11,6 +11,7 @@
     "@expo/webpack-config": "^0.17.2",
     "eas-cli": "^0.31.1",
     "expo": "~47.0.8",
+    "expo-dev-client": "~2.0.1",
     "expo-splash-screen": "~0.17.5",
     "expo-status-bar": "~1.4.2",
     "expo-updates": "~0.15.6",
@@ -20,8 +21,7 @@
     "react-native-easy-toast": "^2.3.0",
     "react-native-paper": "^4.12.5",
     "react-native-toast-message": "^2.1.5",
-    "react-native-web": "~0.18.9",
-    "expo-dev-client": "~2.0.1"
+    "react-native-web": "~0.18.9"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

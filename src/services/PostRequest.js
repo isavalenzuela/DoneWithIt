@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Text, View, StyleSheet, Alert } from 'react-native';
 import { Button } from "react-native-paper";
-import Toast, {DURATION} from 'react-native-easy-toast';
+import Toast from 'react-native-toast-message';
+
 
 const PostRequestExample = () => {
 
@@ -15,23 +16,26 @@ const PostRequestExample = () => {
 		try {
 			await fetch(
 				'https://reqres.in/api/posts', requestOptions)
-				.then(response => {
-					response.json()})
-        .then(data => {
-          (Alert.alert("Post created at : "),
-          data.createdAt);
-        });
+				.then(response => response.json())
+        .then(data => {console.log(data);});
 		} catch (error) {
 			console.error(error);
 		}
 	}
 
+  const showToast = () => {
+    Toast.show({
+      type: 'success',
+      text1: 'OK',
+      text2: 'Tu alerta ha sido enviada 🚨',
+      visibilityTime: 2000
+    });
+  }
+
 	return (
 		<View style={styles.btn}>
-			<Button mode="contained" onPress={postExample} >
+			<Button title='Show Toast' mode="contained" onPress={ () => {showToast(), postExample()}} >
 				AYUDA</Button>
-      {/* <Toast ref={(toast) => this.toast = toast}
-        position='top'/> */}
 		</View>
 	)
 
