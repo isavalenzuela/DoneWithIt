@@ -16,14 +16,12 @@ const PostRequestExample = () => {
 			await fetch(
 				'https://reqres.in/api/posts', requestOptions)
 				.then(response => {
-					response.json()
-						.then(data => {
-							(this.toast.show('Tu mensaje fue enviado 🚨',2000),
-							data.createdAt);
-						});
-				})
-		}
-		catch (error) {
+					response.json()})
+        .then(data => {
+          (Alert.alert("Post created at : "),
+          data.createdAt);
+        });
+		} catch (error) {
 			console.error(error);
 		}
 	}
@@ -31,10 +29,9 @@ const PostRequestExample = () => {
 	return (
 		<View style={styles.btn}>
 			<Button mode="contained" onPress={postExample} >
-				Click to make a Post request</Button>
-      <Toast ref={(toast) => this.toast = toast}
-        position='top'
-      />
+				AYUDA</Button>
+      {/* <Toast ref={(toast) => this.toast = toast}
+        position='top'/> */}
 		</View>
 	)
 
