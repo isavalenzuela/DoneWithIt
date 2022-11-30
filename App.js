@@ -1,20 +1,19 @@
+import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import Toast, {DURATION} from 'react-native-easy-toast';
+import PostRequestExample from './src/services/PostRequest';
 
 
 export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>ola ke ase</Text>
+      <Text>Botón de Pánico</Text>
       <Button title={"Ayuda"} onPress={()=>{
-            this.toast.show('Tu mensaje fue enviado 🚨',2000);
+          PostRequestExample
         }}/>
       <StatusBar style="auto" />
-      <Toast ref={(toast) => this.toast = toast}
-        position='top'
-      />
     </View>
   );
 }

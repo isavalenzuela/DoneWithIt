@@ -17,6 +17,7 @@
     "react-dom": "^18.1.0",
     "react-native": "0.70.5",
     "react-native-easy-toast": "^2.3.0",
+    "react-native-paper": "^4.12.5",
     "react-native-toast-message": "^2.1.5",
     "react-native-web": "~0.18.9"
   },
