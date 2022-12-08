@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, Image } from 'react-native';
 import { Provider as PaperProvider } from "react-native-paper";
 import { withTheme } from 'react-native-paper';
-import PostRequestExample from './src/services/PostRequest';
+import PostRequestExample from './src/services/ApiContainer';
 import Toast from 'react-native-toast-message';
 import { MyReactNativeForm } from './src/screens/Login';
 import { Formik } from 'formik';

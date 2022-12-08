@@ -3,7 +3,7 @@ import React from 'react';
 import { Button, TextInput, View, StyleSheet, Text } from 'react-native';
 import { Formik } from 'formik';
 import * as yup from 'yup'
-import PostRequest from '../services/PostRequest';
+import postLoginData from '../services/ApiContainer';
 
 const loginValidationSchema = yup.object().shape({
   email: yup
@@ -13,7 +13,10 @@ const loginValidationSchema = yup.object().shape({
   password: yup
     .string()
     .min(8, ({ min }) => `La contraseña debe tener al menos ${min} caracteres`)
-    .required('Ingresa tu contraseña'),
+    // .required('Ingresa tu contraseña').matches(
+    //   /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+    //   "Debe contener 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial"
+    // ),
 })
 
 export const MyReactNativeForm = props => (
@@ -21,7 +24,15 @@ export const MyReactNativeForm = props => (
     <Formik
       validationSchema={loginValidationSchema}
       initialValues={{ email: '' , password: ''}}
-      onSubmit={values => console.log(values)}
+      onSubmit={values => postLoginData({...values}).then(resp => {
+        if(resp.token) {
+          alert('login ok')
+        }
+      }).catch(function (error) {
+					// handle error
+				alert(error)
+		}
+      )}
     >
       {({ handleChange,
           handleBlur,
