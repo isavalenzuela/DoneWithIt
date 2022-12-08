@@ -1,47 +1,51 @@
- // Formik x React Native example
-import React from 'react';
-import { Button, TextInput, View, StyleSheet, Text } from 'react-native';
-import { Formik } from 'formik';
+// Formik x React Native example
+import React from 'react'
+import { Button, TextInput, View, StyleSheet, Text } from 'react-native'
+import { Formik } from 'formik'
 import * as yup from 'yup'
-import postLoginData from '../services/ApiContainer';
+import postLoginData from '../services/ApiContainer'
 
 const loginValidationSchema = yup.object().shape({
   email: yup
     .string()
-    .email("Ingresa un email válido")
+    .email('Ingresa un email válido')
     .required('Ingresa tu email'),
   password: yup
     .string()
-    .min(8, ({ min }) => `La contraseña debe tener al menos ${min} caracteres`)
-    // .required('Ingresa tu contraseña').matches(
-    //   /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
-    //   "Debe contener 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial"
-    // ),
+    .min(8, ({ min }) => `La contraseña debe tener al menos ${min} caracteres`),
+  // .required('Ingresa tu contraseña').matches(
+  //   /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+  //   "Debe contener 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial"
+  // ),
 })
 
-export const MyReactNativeForm = props => (
+export const MyReactNativeForm = (props) => (
   <View style={styles.loginContainer}>
     <Formik
       validationSchema={loginValidationSchema}
-      initialValues={{ email: '' , password: ''}}
-      onSubmit={values => postLoginData({...values}).then(resp => {
-        if(resp.token) {
-          alert('login ok')
-        }
-      }).catch(function (error) {
-					// handle error
-				alert(error)
-		}
-      )}
+      initialValues={{ email: '', password: '' }}
+      onSubmit={(values) =>
+        postLoginData({ ...values })
+          .then((resp) => {
+            if (resp.token) {
+              alert('login ok')
+            }
+          })
+          .catch(function (error) {
+            // handle error
+            alert(error)
+          })
+      }
     >
-      {({ handleChange,
-          handleBlur,
-          handleSubmit,
-          values,
-          errors,
-          isValid,
-          touched,
-        }) => (
+      {({
+        handleChange,
+        handleBlur,
+        handleSubmit,
+        values,
+        errors,
+        isValid,
+        touched,
+      }) => (
         <View>
           <TextInput
             name="email"
@@ -52,9 +56,9 @@ export const MyReactNativeForm = props => (
             value={values.email}
             keyboardType="email-address"
           />
-          {(errors.email && touched.email) &&
+          {errors.email && touched.email && (
             <Text style={{ fontSize: 10, color: 'red' }}>{errors.email}</Text>
-          }
+          )}
           <TextInput
             name="password"
             placeholder="Password"
@@ -64,15 +68,17 @@ export const MyReactNativeForm = props => (
             value={values.password}
             secureTextEntry
           />
-          {(errors.password && touched.password) &&
-          <Text style={{ fontSize: 10, color: 'red' }}>{errors.password}</Text>
-          }
+          {errors.password && touched.password && (
+            <Text style={{ fontSize: 10, color: 'red' }}>
+              {errors.password}
+            </Text>
+          )}
           <Button onPress={handleSubmit} title="Ingresar" disabled={!isValid} />
         </View>
       )}
     </Formik>
   </View>
-);
+)
 
 const styles = StyleSheet.create({
   container: {
@@ -87,7 +93,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     padding: 10,
     elevation: 10,
-    backgroundColor: '#white'
+    backgroundColor: '#white',
   },
   textInput: {
     height: 40,
@@ -99,4 +105,3 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 })
-
