@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {
   StyleSheet,
-  Text,
   View,
   Button,
   Image,
@@ -9,7 +8,7 @@ import {
   Icon,
   ScrollView,
 } from 'react-native'
-import { Card } from '@rneui/themed'
+import { Text, Card } from '@rneui/themed'
 
 export function NewsScreen({ navigation }) {
   return (
