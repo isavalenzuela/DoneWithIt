@@ -1,10 +1,9 @@
 import * as React from 'react'
 import { Text, View, Image } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import HomeScreen from './Home'
-import NewsScreen from './NewsScreen'
-import PaymentScreen from './PaymentScreen'
-import ProfileScreen from './ProfileScreen'
+import { NewsScreen } from './NewsScreen'
+import { PaymentScreen } from './PaymentScreen'
+import { ProfileScreen } from './ProfileScreen'
 import {
   MD3LightTheme as DefaultTheme,
   Provider as PaperProvider,
