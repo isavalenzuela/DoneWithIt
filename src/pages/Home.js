@@ -1,11 +1,12 @@
-const HomeScreen = ({ navigation }) => {
+import React from 'react'
+import { Text, View } from 'react-native'
+
+const HomeScreen = () => {
   return (
-    <Button
-      title="Go to Jane's profile"
-      onPress={() => navigation.navigate('Profile', { name: 'Jane' })}
-    />
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Estás en el Home!</Text>
+    </View>
   )
 }
-const ProfileScreen = ({ navigation, route }) => {
-  return <Text>This is {route.params.name}'s profile</Text>
-}
+
+export default HomeScreen
