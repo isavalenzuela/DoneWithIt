@@ -115,6 +115,6 @@ export function NewsScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: StatusBar.currentHeight,
+    paddingTop: 10,
   },
 });
