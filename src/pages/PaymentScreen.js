@@ -7,8 +7,8 @@ export function PaymentScreen({ navigation }) {
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Card>
         <Card.Image
-          style={{ padding: 0, height: 280, maxWidth: '100%' }}
-          src={'http://placekitten.com/g/280/280'}
+          style={{ padding: 0, height: 200, maxWidth: '100%' }}
+          source={require('../../assets/maintenance.gif')}
         />
         <Button
           color="#73308a"
