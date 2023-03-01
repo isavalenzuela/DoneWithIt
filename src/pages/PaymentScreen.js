@@ -11,6 +11,7 @@ export function PaymentScreen({ navigation }) {
           src={'http://placekitten.com/g/280/280'}
         />
         <Button
+          color="#73308a"
           icon={
             <Icon name="code" color="#ffffff" iconStyle={{ marginRight: 10 }} />
           }

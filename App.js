@@ -25,7 +25,7 @@ export default function App() {
             options={{
               title: 'El Boscapp',
               headerStyle: {
-                backgroundColor: '#58b858',
+                backgroundColor: '#73308a',
               },
               headerTintColor: '#fff',
               headerTitleStyle: {

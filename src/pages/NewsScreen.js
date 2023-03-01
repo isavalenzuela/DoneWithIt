@@ -25,6 +25,7 @@ export function NewsScreen({ navigation }) {
             LLEGAN A EL BOSQUE
           </Text>
           <Button
+            color="#73308a"
             icon={
               <Icon
                 name="code"
@@ -53,6 +54,7 @@ export function NewsScreen({ navigation }) {
             BRILLANTE PRESENTACIÓN DE TALLERES “EL BOSQUE APRENDE A NADAR”
           </Text>
           <Button
+            color="#73308a"
             icon={
               <Icon
                 name="code"
@@ -82,6 +84,7 @@ export function NewsScreen({ navigation }) {
             REPRESENTARÁN EN EL FESTIVAL DEL HUASO DE OLMUÉ
           </Text>
           <Button
+            color="#73308a"
             icon={
               <Icon
                 name="code"
