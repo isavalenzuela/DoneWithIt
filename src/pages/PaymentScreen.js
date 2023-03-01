@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, View, Button, Image, Icon, Linking } from 'react-native'
 import { Text, Card } from '@rneui/themed'
 
@@ -9,7 +8,7 @@ export function PaymentScreen({ navigation }) {
       <Card>
         <Card.Image
           style={{ padding: 0, height: 280, maxWidth: '100%' }}
-          source={require('../../assets/Rickrolling_QR_code.png')}
+          src={'https://reactnative.dev/img/tiny_logo.png'}
         />
         <Button
           icon={
