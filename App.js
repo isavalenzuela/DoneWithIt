@@ -23,7 +23,7 @@ export default function App() {
             name="BottomTab"
             component={BottomTab}
             options={{
-              title: 'Tarjeta Pircana',
+              title: 'El Boscapp',
               headerStyle: {
                 backgroundColor: '#58b858',
               },

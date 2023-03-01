@@ -20,9 +20,9 @@ export function NewsScreen({ navigation }) {
             style={{ padding: 0 }}
             source={require('../../assets/firstnews.png')}
           />
-          <Text style={{ marginBottom: 10, marginTop: 10 }}>
-            Jaime Escudero Ramos, alcalde de Pirque: "La instalación de la
-            oficina ChileAtiende es un tremendo logro para nuestra comunidad"
+          <Text style={{ marginBottom: 10, marginTop: 10, fontWeight: 'bold' }}>
+            VERANO EN TU BARRIO: JUEGOS DE AGUA Y EL MEJOR STAND UP COMEDY
+            LLEGAN A EL BOSQUE
           </Text>
           <Button
             icon={
@@ -40,9 +40,7 @@ export function NewsScreen({ navigation }) {
             }}
             title="Ver en el navegador"
             onPress={() => {
-              Linking.openURL(
-                'https://www.pirque.cl/jaime-escudero-ramos-alcalde-de-pirque-la-instalacion-de-la-oficina-chileatiende-es-un-tremendo-logro-para-nuestra-comunidad/',
-              )
+              Linking.openURL('https://elboscapp.codingchickens.com/news/4')
             }}
           />
         </Card>
@@ -51,9 +49,8 @@ export function NewsScreen({ navigation }) {
             style={{ padding: 0 }}
             source={require('../../assets/secondnews.png')}
           />
-          <Text style={{ marginBottom: 10, marginTop: 10 }}>
-            Torneo de Robótica First Lego League 2022 Escuela Santos Rubio
-            premiada con la Copa “Estrella Ascendente
+          <Text style={{ marginBottom: 10, marginTop: 10, fontWeight: 'bold' }}>
+            BRILLANTE PRESENTACIÓN DE TALLERES “EL BOSQUE APRENDE A NADAR”
           </Text>
           <Button
             icon={
@@ -71,9 +68,7 @@ export function NewsScreen({ navigation }) {
             }}
             title="Ver en el navegador"
             onPress={() => {
-              Linking.openURL(
-                'https://www.pirque.cl/torneo-de-robotica-first-lego-league-2022-escuela-santos-rubio-premiada-con-la-copa-estrella-ascendente/',
-              )
+              Linking.openURL('https://elboscapp.codingchickens.com/news/5')
             }}
           />
         </Card>
@@ -82,8 +77,9 @@ export function NewsScreen({ navigation }) {
             style={{ padding: 0 }}
             source={require('../../assets/thirdnews.png')}
           />
-          <Text style={{ marginBottom: 10, marginTop: 10 }}>
-            Una gran celebración para las personas mayores de Pirque
+          <Text style={{ marginBottom: 10, marginTop: 10, fontWeight: 'bold' }}>
+            ROMINA NÚÑEZ Y PANCHO MIRANDA LOS ARTISTAS BOSQUINOS QUE NOS
+            REPRESENTARÁN EN EL FESTIVAL DEL HUASO DE OLMUÉ
           </Text>
           <Button
             icon={
@@ -101,9 +97,7 @@ export function NewsScreen({ navigation }) {
             }}
             title="Ver en el navegador"
             onPress={() => {
-              Linking.openURL(
-                'https://www.pirque.cl/una-gran-celebracion-para-las-personas-mayores-de-pirque/',
-              )
+              Linking.openURL('https://elboscapp.codingchickens.com/news/3')
             }}
           />
         </Card>
@@ -117,4 +111,4 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 10,
   },
-});
+})

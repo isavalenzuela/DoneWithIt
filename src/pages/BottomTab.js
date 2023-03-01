@@ -28,7 +28,7 @@ export const BottomTab = () => {
                 />
               )
             },
-            tabBarActiveTintColor: 'tomato',
+            tabBarActiveTintColor: 'bold',
             tabBarInactiveTintColor: 'gray',
           }}
         />
@@ -45,7 +45,7 @@ export const BottomTab = () => {
                 />
               )
             },
-            tabBarActiveTintColor: 'tomato',
+            tabBarActiveTintColor: 'bold',
             tabBarInactiveTintColor: 'gray',
           }}
         />
@@ -62,7 +62,7 @@ export const BottomTab = () => {
                 />
               )
             },
-            tabBarActiveTintColor: 'tomato',
+            tabBarActiveTintColor: 'bold',
             tabBarInactiveTintColor: 'gray',
           }}
         />

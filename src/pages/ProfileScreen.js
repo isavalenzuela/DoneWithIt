@@ -12,10 +12,12 @@ export function ProfileScreen({ navigation }) {
     >
       <Card>
         <Card.Image
+          style={{ paddingBottom: '20px' }}
           source={require('../../assets/profile.png')}
           // containerStyle={styles.item}
         ></Card.Image>
-        <Text containerStyle={styles.profileText}>Jaime Escudero Ramos</Text>
+        <Text></Text>
+        <Text>Manuel Zúñiga Aguilar</Text>
       </Card>
       <DataTablePayments></DataTablePayments>
     </View>
@@ -31,5 +33,6 @@ const styles = StyleSheet.create({
   },
   profileText: {
     marginTop: 20,
+    paddingTop: 50,
   },
 })

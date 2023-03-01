@@ -8,7 +8,7 @@ export function PaymentScreen({ navigation }) {
       <Card>
         <Card.Image
           style={{ padding: 0, height: 280, maxWidth: '100%' }}
-          src={'https://reactnative.dev/img/tiny_logo.png'}
+          src={'http://placekitten.com/g/280/280'}
         />
         <Button
           icon={
@@ -20,7 +20,7 @@ export function PaymentScreen({ navigation }) {
             marginRight: 0,
             marginBottom: 0,
           }}
-          title="Abrir Compraquí BancoEstado"
+          title="Hablar con un operador"
           onPress={() => {
             Linking.openURL('whatsapp://app')
           }}
