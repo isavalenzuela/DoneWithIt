@@ -8,12 +8,8 @@ export default function Login() {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../../assets/card_animation.gif')}
-        style={{ width: 300, height: 300 }}
-      />
-      <Image
-        source={require('../../assets/tarjetapircana.png')}
-        style={{ width: 200, height: '20%' }}
+        source={require('../../assets/escudoelbosque.png')}
+        style={{ width: 200, height: '20%', marginTop: 100 }}
       />
       <Text variant="headlineMedium">Iniciar Sesión</Text>
       <StatusBar style="auto" />
